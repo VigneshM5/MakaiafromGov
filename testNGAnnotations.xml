@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Lead" verbose="5" parallel = "classes">
+	<!-- <groups> <run> <exclude name="Sanity"></exclude> <include name="Smoke"></include> 
+		<include name="Common"></include> </run> </groups> -->
+	<parameter name="url" value="http://leaftaps.com/opentaps"></parameter>
+	<parameter name="userName" value="DemoSalesManager"></parameter>
+	<parameter name="password" value="crmsfa"></parameter>
+
+	<listeners>
+		<listener class-name="lib.listeners.TestNGListerner"></listener>
+	</listeners>
+
+	<test name="CreateAndDelete" >
+		<classes>
+			<class name="tests.CreateLead" />
+			<!-- <class name="tests.EditLead" />
+			<class name="tests.DuplicateLead"/> -->
+			<!-- <class name="tests.CreateLead2" /> -->
+		</classes>
+	</test> <!-- CreateAndDelete -->
+</suite> <!-- Lead -->
